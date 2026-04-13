@@ -1,17 +1,29 @@
 ---
-
+import Baselayout from "../layouts/Baselayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Baselayout>
+	<nav>
+		<h1>Cynetic Studios</h1>
+
+		<div class="types">
+			<h2>Design</h2>
+			<h2>Artwork</h2>
+		</div>
+	
+	</nav>
+</Baselayout>
+
+<style>
+	nav{
+		display:flex;
+		justify-content: space-between;
+		padding: 2em;
+
+	}
+	.types{
+		display:flex;
+		justify-content: space-between;
+		gap: 2em;
+	}
+</style>

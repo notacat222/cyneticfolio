@@ -10,7 +10,10 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Cynetic</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=DotGothic16&family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
 	</head>
 	<body>
         <slot>
@@ -19,8 +22,12 @@
 </html>
 
 <style>
+	h1, h2 {
+  font-family: "Nunito Sans", sans-serif;
+}
     body{
         background-color: white;
         color:blueviolet;
+		font-family: "Nunito Sans", sans-serif;
     }
 </style>

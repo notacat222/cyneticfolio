@@ -4,19 +4,28 @@ import Baselayout from "../layouts/Baselayout.astro";
 
 <Baselayout>
 	<nav>
-		<h1>Cynetic Studios</h1>
-
 		<div class="types">
-			<h2>Design</h2>
-			<h2>Artwork</h2>
-			<h2>About</h2>
+			<a href="design">Design</a>
+			<a href="art">Artwork & Sound</a>
+			<a>Curation</a>
+			<a>About</a>
 		</div>
+
+		<h1>Cynetic</h1>
+
+		
 	
 	</nav>
 	<script is:inline src="/sketch.js" > </script>
 </Baselayout>
 
-<style>
+<style is:global>
+	canvas {
+		position: absolute;
+		top: 0;
+		z-index: -10;
+	}
+
 	nav{
 		display:flex;
 		justify-content: space-between;
@@ -25,8 +34,15 @@ import Baselayout from "../layouts/Baselayout.astro";
 	}
 	.types{
 		display:flex;
+		flex-direction: column;
 		justify-content: space-between;
 		gap: 2em;
+		font-size: 30pt;
+	}
+	h1 {
+		all: unset;
+		font-size: 30pt;
+
 	}
 </style>
 

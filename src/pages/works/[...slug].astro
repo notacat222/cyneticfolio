@@ -23,10 +23,7 @@ const { Content } = await render(work)
 <Baselayout>
     <h1>{work.data.title}</h1>
     <p>{work.data.date.getFullYear()}-{work.data.date.getMonth()+1}</p>
-    <div class="tags">{work.data.tags.map(tag => (
-        <a href={tag}> {tag} </a>
-    )
-)}</div>
+
     <Content></Content>
 </Baselayout>
 

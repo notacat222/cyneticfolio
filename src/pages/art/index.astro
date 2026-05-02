@@ -1,0 +1,12 @@
+---
+import { getCollection } from "astro:content"
+import Projects from "../../Components/Projects.astro"
+
+const artProjects = (await getCollection("works"))
+    .filter(project => project.data.type=='art')
+---
+
+<Projects title="Art and Sound" projects={artProjects}>
+
+
+</Projects>

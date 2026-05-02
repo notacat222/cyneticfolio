@@ -7,7 +7,7 @@ const works = defineCollection({
         pattern: '**/*.md', base: "./src/content/works"
     }),
     schema: z.object({
-        tags: z.array(z.string()),
+        type: z.literal(['design', 'art', 'curation', 'about']),
         title: z.string(),
         date: z.date(),
         links: z.url().optional()

@@ -1,0 +1,45 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Baselayout from "../layouts/Baselayout.astro";
+
+interface Props {
+    title: string;
+    projects: CollectionEntry<"works">[]
+}
+
+const props = Astro.props;
+
+const sorted = props.projects.sort((a,b) => {
+    const timeA = new Date(a.data.date)
+    const timeB = new Date(b.data.date)
+    return timeB.getTime() - timeA.getTime()
+})
+
+---
+<Baselayout>
+    <div>
+        <h1>{props.title}</h1>
+        <h1>Projects</h1>
+    </div>
+    
+    <ul>
+        {
+            sorted.map(project => {
+                return <li>
+                    <a href={`/works/${project.id}`}>
+                        {project.data.title}
+                    </a>
+                </li>
+            })
+        }
+
+    </ul>
+</Baselayout>
+
+<style is:inline>
+  h1 {
+     padding: 1em;
+    }   
+
+    
+</style>
